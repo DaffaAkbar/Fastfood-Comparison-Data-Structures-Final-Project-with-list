@@ -13,7 +13,7 @@ float HourWork;//data type that indicate how long the employee work
 float cashier_1;//data type that indicate how many customer that is being served
 
 
-list<int>cashier1;//vector for each cashier
+list<int>cashier1;//list for each cashier
 list<int>cashier2;
 list<int>cashier3;
 list<int>cashier4;
@@ -101,14 +101,16 @@ void SimulateData(){
 				People_Leave_3++;//int that indicate how many customer have left before being served
 			}
 		}
+		
+		cout<<"TimePass:"<<timepass<<endl;
 		cout<<" --------------\n";
         cout<<"|With 1 Cashier|\n";
         cout<<" --------------\n";
         cout<<"\n";
 		cout<<"Cashier_1:";
-		for (int i =0; i < cashier1.size(); i++){
-//            cout<<"["<<cashier1[i]<<"]";(to check the element that each customer have)(for testing purposes)
-            cout<<"[]";
+		for(iter=cashier1.begin(); iter!=cashier1.end();iter++){
+			 cout<<"["<<*iter<<"]";//(to check the element that each customer have);//(for testing purposes)
+//            cout<<"[]";
 		} //to print symbol that indicate the customer's
 		cout<<"\n\n";
 		cout<<" --------------\n";
@@ -116,35 +118,38 @@ void SimulateData(){
 		cout<<" --------------\n";
 		cout<<"\n";
 		cout<<"Cashier_2:";
-		for (int i =0; i < cashier2.size(); i++){
-            cout<<"[]";
-		}  //to print symbol that indicate the customer's  
+		for(iter=cashier2.begin(); iter!=cashier2.end();iter++){
+			 cout<<"["<<*iter<<"]";//(to check the element that each customer have);//(for testing purposes)
+//            cout<<"[]";
+		} //to print symbol that indicate the customer's
 		cout<<"\n\n";
 		cout<<"Cashier_3:";
-		for (int i =0; i < cashier3.size(); i++){
-            cout<<"[]";
-		}//to print symbol that indicate the customer's
+		for(iter=cashier3.begin(); iter!=cashier3.end();iter++){
+			 cout<<"["<<*iter<<"]";//(to check the element that each customer have);//(for testing purposes)
+//            cout<<"[]";
+		} //to print symbol that indicate the customer's
 		cout<<"\n\n";
 		cout<<" --------------\n";
 		cout<<"|With 3 Cashier|\n";
 		cout<<" --------------\n";
 		cout<<"\n";
 		cout<<"Cashier_4:";
-		for (int i =0; i < cashier4.size(); i++){
-            cout<<"[]";
-		}//to print symbol that indicate the customer's
+		for(iter=cashier4.begin(); iter!=cashier4.end();iter++){
+			cout<<"["<<*iter<<"]";//(to check the element that each customer have);//(for testing purposes)
+//            cout<<"[]";
+		} //to print symbol that indicate the customer's
 		cout<<"\n\n";
 		cout<<"Cashier_5:";
-		for (int i =0; i < cashier5.size(); i++){
-            cout<<"[]";
-		}//to print symbol that indicate the customer's
+		for(iter=cashier5.begin(); iter!=cashier5.end();iter++){
+			cout<<"["<<*iter<<"]";//(to check the element that each customer have);//(for testing purposes)
+//            cout<<"[]";
+		} //to print symbol that indicate the customer's
 		cout<<"\n\n";
 		cout<<"Cashier_6:";
-		if(cashier6.size()!=0){
-			for (int i =0; i < cashier6.size(); i++){
-            cout<<"[]";
-			}//to print symbol that indicate the customer's	
-		}
+		for(iter=cashier6.begin(); iter!=cashier6.end();iter++){
+			cout<<"["<<*iter<<"]";//(to check the element that each customer have);//(for testing purposes)
+//            cout<<"[]";
+		} //to print symbol that indicate the customer's
 	
 		if(cashier1.size()!=0){
 			cashier1.pop_front();
@@ -167,6 +172,7 @@ void SimulateData(){
 		}//to remove the customer that have already being served
 		
 		Sleep(1000);//to initiate waiting time
+//		Sleep(3000); for testing
 		system("cls");//to clear the screen
 	
 		cout<<endl;
@@ -265,4 +271,3 @@ void Menu(){
     }
     system("cls");
 }
-
